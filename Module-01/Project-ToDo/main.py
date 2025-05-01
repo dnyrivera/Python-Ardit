@@ -2,7 +2,7 @@ todos = []
 
 while True:
     user_option = input(
-        "Choose your option: Add / List / Exit: ").strip().upper()
+        "Choose your option: Add / List / Edit / Exit: ").strip().upper()
 
     match user_option:
         case 'ADD':
@@ -12,6 +12,8 @@ while True:
         case 'LIST':
             for index, item in enumerate(todos, start=1):
                 print(index, item, sep='->')
+        case 'EDIT':
+            print('Edited')
         case 'EXIT':
             break
         case _:
